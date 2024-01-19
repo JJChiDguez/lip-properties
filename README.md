@@ -55,11 +55,11 @@ Just run (for example):
 % sage -python TestRemark7.py -n 16 --verbose
 # Groebner basis approach
 % sage -python TestTheorem1.py -n 16 -gb --verbose
-% sage -python TestTheorem2.py -n 16
+% sage -python TestTheorem2.py -n 16 --verbose
 % sage -python TestLemma2.py -n 16 -gb --verbose
 % sage -python TestLemma3.py -n 16 -gb --verbose
 % sage -python TestRemark7.py -n 16 -gb --verbose
-% sage -python TestRemark8.py -n 16
+% sage -python TestRemark8.py -n 16 --verbose
 ```
 
 ### Testing 25 random instances
