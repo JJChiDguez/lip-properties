@@ -10,9 +10,8 @@ Proof-of-concept implementation using **sagemath**.
   2. `TestTheorem1.py`;
   3. `TestTheorem2.py`;
   4. `TestLemma2.py`;
-  4. `TestLemma3.py`;
-  5. `TestRemark7.py`; and
-  6. `TestRemark8.py`.
+  4. `TestLemma3.py`; and
+  5. `TestRemark7.py`.
 
 2. **Sagemath** installed
 
@@ -59,7 +58,6 @@ Just run (for example):
 % sage -python TestLemma2.py -n 16 -gb --verbose
 % sage -python TestLemma3.py -n 16 -gb --verbose
 % sage -python TestRemark7.py -n 16 -gb --verbose
-% sage -python TestRemark8.py -n 16 --verbose
 ```
 
 ### Testing 25 random instances
@@ -77,7 +75,6 @@ Just run (for example):
 % sage -python TestLemma2.py -n 8 -gb
 % sage -python TestLemma3.py -n 8 -gb
 % sage -python TestRemark7.py -n 8 -gb
-% sage -python TestRemark8.py -n 8
 ```
 
 
