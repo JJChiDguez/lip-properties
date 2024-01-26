@@ -303,7 +303,7 @@ def recover_gb(q0: list, q1: list, n: int):
 
     def polyring_str(n):
         # Constructs a string that evaluates into a polynomial ring over QQ with n variables
-        res = "PolynomialRing(QQ, order='deglex', names=["
+        res = "PolynomialRing(QQ, names=["
         for i in range(n):
             res += "'x{}',".format(i)
         res += "])"
@@ -315,17 +315,16 @@ def recover_gb(q0: list, q1: list, n: int):
     for i in range(len(q0)):
         q0_i = q0[i]
         q1_i = q1[i]
+        eq = v * q0_i * v
         for j in range(n):
-            norm = q1_i[j,j]
-            eq = v * q0_i * v
-            eqs[j].append(polyring(eq - norm))
+            eqs[j].append(eq - q1_i[j,j])
     
     # GB extract
     sols = []
     print('')
     for i in range(n):
         I = ideal(eqs[i])
-        sys.stdout.write("\r# Call msolve, semi regularity degree equals {}: {}/{}".format(I.degree_of_semi_regularity(), i + 1, n))
+        sys.stdout.write("\r# Call msolve: {}/{}".format(i + 1, n))
         sys.stdout.flush()
         sols.append(I.variety(algorithm="msolve",proof=False))
     print('')
